@@ -1,0 +1,38 @@
+<form (ngSubmit)="submitForm()">
+  <label>Budget</label>
+  <input type="number" [(ngModel)]="userPreferences.budget" name="budget" required />
+
+  <label>Climate</label>
+  <select [(ngModel)]="userPreferences.climate" name="climate">
+    <option value="tropical">Tropical</option>
+    <option value="cold">Cold</option>
+    <option value="temperate">Temperate</option>
+  </select>
+
+  <label>Terrain</label>
+  <select [(ngModel)]="userPreferences.terrain" name="terrain">
+    <option value="beach">Beach</option>
+    <option value="mountain">Mountain</option>
+    <option value="desert">Desert</option>
+  </select>
+
+  <label>Food Availability</label>
+  <select [(ngModel)]="userPreferences.foodAvailability" name="foodAvailability">
+    <option value="seafood">Seafood</option>
+    <option value="continental">Continental</option>
+    <option value="vegetarian">Vegetarian</option>
+  </select>
+
+  <label>Days</label>
+  <input type="number" [(ngModel)]="userPreferences.days" name="days" required />
+
+  <label>Age Group</label>
+  <select [(ngModel)]="userPreferences.ageGroup" name="ageGroup">
+    <option value="children">Children</option>
+    <option value="teens">Teens</option>
+    <option value="adults">Adults</option>
+    <option value="seniors">Seniors</option>
+  </select>
+
+  <button type="submit">Get Recommendations</button>
+</form>
